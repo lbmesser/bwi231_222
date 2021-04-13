@@ -1,10 +1,10 @@
 package de.hs_lu.o2s.tut1.uebung;
 
-public class carArray {
+public class CarArray {
 
 	private Auto[] carArray;
 
-	public carArray() {
+	public CarArray() {
 		carArray = new Auto[0];
 	}
 
