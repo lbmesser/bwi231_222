@@ -25,9 +25,9 @@ public class TestHilfskraft extends TestCase {
 	}
 
 	public void testBerechneNettoGehalt() {
-		assertEquals(6500, this.elektrikonikGehilfe.berechneNettoGehalt());
-		assertEquals(13000, this.schlosserGehilfe.berechneNettoGehalt());
-		assertEquals(0, this.schreinerGehilfe.berechneNettoGehalt());
+		assertEquals(7500, this.elektrikonikGehilfe.berechneNettoGehalt());
+		assertEquals(15000, this.schlosserGehilfe.berechneNettoGehalt());
+		assertEquals(9999, this.schreinerGehilfe.berechneNettoGehalt());
 	}
 
 }
