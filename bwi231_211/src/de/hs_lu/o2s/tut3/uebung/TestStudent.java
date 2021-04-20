@@ -1,4 +1,4 @@
-package de.hs_lu.o2s.tutorium.tut3.ueb;
+package de.hs_lu.o2s.tut3.uebung;
 
 import junit.framework.TestCase;
 
