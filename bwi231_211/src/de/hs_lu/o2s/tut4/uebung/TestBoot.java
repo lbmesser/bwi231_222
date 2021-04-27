@@ -1,6 +1,6 @@
 package de.hs_lu.o2s.tut4.uebung;
 
-import de.hs_lu.o2s.tut3.ueb.Person;
+import de.hs_lu.o2s.tut3.uebung.Person;
 import junit.framework.TestCase;
 
 public class TestBoot extends TestCase {

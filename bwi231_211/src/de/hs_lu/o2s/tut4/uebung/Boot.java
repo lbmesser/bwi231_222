@@ -1,6 +1,8 @@
 package de.hs_lu.o2s.tut4.uebung;
 
-public class Boot {
+import de.hs_lu.o2s.tut4.uebung.Boot;
+
+public class Boot implements Comparable {
 
 	private int gewicht, sitze, maxKnoten;
 	private double laenge, breite, hoehe;
@@ -12,6 +14,28 @@ public class Boot {
 		this.laenge = laenge;
 		this.breite = breite;
 		this.hoehe = hoehe;
+	}
+
+	@Override
+	public int compareTo(Object objectToCompare) {
+		Boot bootToCompare = null;
+
+		if (!(objectToCompare instanceof Boot)) {
+			System.out
+					.println("compareTo: uebergebenes Objekt ist kein Boot. Vergleich kann nicht durchgeführt werden.");
+			return Integer.MIN_VALUE;
+		}
+		bootToCompare = (Boot) objectToCompare;
+
+		int maxKnotenDifferenz = this.maxKnoten - bootToCompare.maxKnoten;
+		if (maxKnotenDifferenz != 0)
+			return maxKnotenDifferenz;
+
+		int sitzeDifferenz = this.sitze - bootToCompare.sitze;
+		if (sitzeDifferenz != 0)
+			return sitzeDifferenz;
+
+		return 0;
 	}
 
 	public int getGewicht() {
