@@ -12,6 +12,12 @@ public class Segelboot extends Boot {
 		this.anzahlKajueten = anzahlKajueten;
 	}
 
+	public void checkPersonen(int anzahlPersonen) throws ZuVielePersonenException {
+		int maxAnzahlPersonen = this.getSitze() + this.getAnzahlKajueten();
+		if (anzahlPersonen > maxAnzahlPersonen)
+			throw new ZuVielePersonenException();
+	}
+
 	public double getGesamtSegelflaeche() {
 		return this.gesamtSegelflaeche;
 	}
@@ -27,7 +33,4 @@ public class Segelboot extends Boot {
 	public void setAnzahlKajueten(int anzahlKajueten) {
 		this.anzahlKajueten = anzahlKajueten;
 	}
-	
-	
-
 }

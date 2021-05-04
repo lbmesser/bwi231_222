@@ -36,6 +36,11 @@ public class Boot implements Comparable {
 		return 0;
 	}
 
+	public void checkPersonen(int anzahlPersonen) throws ZuVielePersonenException {
+		if (anzahlPersonen > this.getSitze())
+			throw new ZuVielePersonenException();
+	}
+
 	public int getGewicht() {
 		return this.gewicht;
 	}
@@ -84,8 +89,16 @@ public class Boot implements Comparable {
 		this.hoehe = hoehe;
 	}
 
-	@Override
-	public String toString() {
+	public String toString(int anzahlPersonen) {
+		try {
+			this.checkPersonen(anzahlPersonen);
+		}
+		catch(ZuVielePersonenException e) {
+			return e.getMessage();
+		}
+		catch(Exception e) {
+			return e.getMessage();
+		}
 		String result = this.getClass().getSimpleName() + " mit " + this.getSitze() + " Sitzen, einer Laenge von "
 				+ this.getLaenge() + ", einer Breite von " + this.getBreite() + ", einer Hoehe von " + this.getGewicht()
 				+ ", einem Gewicht von " + this.getGewicht() + " und einer Maximalgeschwindigkeit von "
