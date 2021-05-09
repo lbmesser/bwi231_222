@@ -1,0 +1,16 @@
+	public void severalExceptions(){
+		int a=1, b=1, c;
+	//ArithmeticException moeglich
+	   c=a/b;
+	   System.out.println("c ist " + c);
+	   java.io.RandomAccessFile f;
+	//FileNotFoundException moeglich
+	   f = new java.io.RandomAccessFile(
+			   	"c:\\windows\\desktop.ini", "r" );
+	   String line;
+	//IOException moeglich
+	   while ( (line = f.readLine()) != null ){
+	      System.out.println( line );
+	   }
+	   f.close();
+	}
