@@ -27,7 +27,9 @@ public class TestYachtkatalog extends TestCase {
 
 	public void testToAdd() {
 		assertTrue(this.yachtKatalog.add(atlantis));
+		assertTrue(this.yachtKatalog.contains(atlantis));
 		assertTrue(this.yachtKatalog.add(opalRuderboot));
+		assertTrue(this.yachtKatalog.contains(opalRuderboot));
 
 		// Jedes Boot hat eine eindeutige Kombination aus Name und Kaufpreis. Es darf
 		// somit in dem Yachtkatalog nicht zweimal ein Boot hinzugefügt werden, das
