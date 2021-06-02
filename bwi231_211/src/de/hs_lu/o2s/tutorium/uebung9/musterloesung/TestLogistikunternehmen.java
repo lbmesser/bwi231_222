@@ -71,6 +71,13 @@ public class TestLogistikunternehmen extends TestCase {
 
 		ArrayList<Object> deepCopyLogistikunternehmen = this.logistikunternehmen.safeData();
 
+		ArrayList<Object> shallowCopyLogistikunternehmen = new ArrayList<Object>();
+
+		shallowCopyLogistikunternehmen.addAll(logistikunternehmen.getAnhaenger());
+		shallowCopyLogistikunternehmen.addAll(logistikunternehmen.getFahrer());
+		shallowCopyLogistikunternehmen.addAll(logistikunternehmen.getLastkraftwagen());
+
+		assertEquals(shallowCopyLogistikunternehmen.size(), deepCopyLogistikunternehmen.size());
 		this.fahrerKlasseC.setFuehrerscheinKlasse("C1");
 		this.aufliegerAnhaenger.setAnzahlAchsen("Einachsiger-Haenger");
 		this.lkwKlasseC.setMotor(new Motor(16, 490, "Diesel"));
