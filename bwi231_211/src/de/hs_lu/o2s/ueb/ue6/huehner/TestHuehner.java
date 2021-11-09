@@ -65,7 +65,7 @@ public class TestHuehner extends TestCase {
 		Henne berta = new Henne("Berta", new Ei("blau", 7));
 		System.out.println(berta.toString());
 		
-		assertTrue(berta.toString().equals("Henne mit Name Berta und Ei mit Farbe blau und Groesse 7.0"));
+		assertTrue(berta.toString().equals("Dies ist eine Henne mit Name Berta und Ei mit Farbe blau und Groesse 7.0"));
 
 	}
 	
