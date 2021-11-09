@@ -29,7 +29,7 @@ public class Henne {
 	 * Ausgabe der Henne als String
 	 */
 	public String toString(){
-		return "Henne mit Name " + this.getName() + " und " + this.getEi();
+		return "Dies ist eine Henne mit Name " + this.getName() + " und " + this.getEi();
 	}
 	
 	
