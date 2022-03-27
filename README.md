@@ -1,1 +1,1 @@
-# BWI231 - Programmieren 2 im Wintersemester 2021/22
+# BWI231 - Programmieren 2 im Sommersemester 2022
