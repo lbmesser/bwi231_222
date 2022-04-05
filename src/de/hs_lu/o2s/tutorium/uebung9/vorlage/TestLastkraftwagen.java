@@ -8,7 +8,7 @@ public class TestLastkraftwagen extends TestCase {
 	Lastkraftwagen lkwKlasseC, lkwKlasseC1, lkwKlasseC1E;
 
 	protected void setUp() throws Exception {
-		this.fahrerKlasseB = new Lastkraftwagenfahrer("122", "Benedikt Lueth", "B");
+		this.fahrerKlasseB = new Lastkraftwagenfahrer("122", "Christian Walter", "B");
 		this.fahrerKlasseC = new Lastkraftwagenfahrer("123", "Thorsten Mayer", "C");
 		this.fahrerKlasseC1 = new Lastkraftwagenfahrer("124", "Guenther Braun", "C1");
 		this.fahrerKlasseC1E = new Lastkraftwagenfahrer("125", "Peter Dietrich", "C1E");
