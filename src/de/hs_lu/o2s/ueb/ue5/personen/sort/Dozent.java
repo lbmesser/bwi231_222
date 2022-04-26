@@ -51,5 +51,11 @@ public class Dozent extends Person {
 	public String getHS_Status() {
 		return "Dozent";
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
